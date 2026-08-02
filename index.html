@@ -1,39 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Website</title>
+
 <style>
 body{
-    font-family: Arial;
-    background:#f2f2f2;
-    text-align:center;
+    margin:0;
+    font-family:Arial,sans-serif;
 }
-h1{
-    color:blue;
-}
-button{
-    padding:10px 20px;
-    background:green;
+
+.header{
+    background:#000;
     color:white;
-    border:none;
-    border-radius:5px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 20px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:red;
+}
+
+.btn{
+    background:#222;
+    color:white;
+    border:2px solid red;
+    padding:8px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+    padding:12px;
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+.menu a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Welcome to My Website</h1>
-<p>Ye website sirf HTML aur CSS se bani hai.</p>
+<div class="header">
+    <div class="logo">N<span>.</span>DTV</div>
+    <button class="btn">GET APP</button>
+</div>
 
-<button onclick="hello()">Click Me</button>
-
-<script>
-function hello(){
-    alert("Namaste!");
-}
-</script>
+<div class="menu">
+    <a href="#">Live TV</a>
+    <a href="#">Latest</a>
+    <a href="#">India</a>
+    <a href="#">Videos</a>
+    <a href="#">World</a>
+</div>
 
 </body>
 </html>
