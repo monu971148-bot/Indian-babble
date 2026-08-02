@@ -17,7 +17,20 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:12px 20px;
+    padding:12px 15px;
+}
+
+.menu-icon{
+    width:30px;
+    cursor:pointer;
+}
+
+.menu-icon span{
+    display:block;
+    height:3px;
+    background:white;
+    margin:5px 0;
+    border-radius:2px;
 }
 
 .logo{
@@ -30,7 +43,7 @@ body{
 }
 
 .btn{
-    background:#222;
+    background:#111;
     color:white;
     border:2px solid red;
     padding:8px 15px;
@@ -44,30 +57,93 @@ body{
     padding:12px;
     background:white;
     border-bottom:1px solid #ddd;
+    overflow-x:auto;
 }
 
 .menu a{
     text-decoration:none;
     color:black;
     font-weight:bold;
+    white-space:nowrap;
+}
+
+/* Side Menu */
+.side-menu{
+    position:fixed;
+    top:0;
+    left:-250px;
+    width:250px;
+    height:100%;
+    background:#111;
+    transition:0.3s;
+    padding-top:60px;
+}
+
+.side-menu a{
+    display:block;
+    color:white;
+    padding:15px 20px;
+    text-decoration:none;
+}
+
+.side-menu a:hover{
+    background:#333;
 }
 </style>
 </head>
 
 <body>
 
+<!-- Side Menu -->
+<div id="sideMenu" class="side-menu">
+
+<div style="padding:15px;">
+<input type="text" placeholder="search news..."
+style="width:100%;padding:
+12px;border-radius:
+20px;border:none;outline:none;font-size:
+12px;">
+</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="latest.html">📰 Latest</a>
+    <a href="india.html">🇮🇳 India</a>
+    <a href="world.html">🌍 World</a>
+    <a href="videos.html">🎥 Videos</a>
+</div>
+
 <div class="header">
-    <div class="logo">N<span>.</span>DTV</div>
-    <button class="btn">GET APP</button>
+
+<div class="menu-icon" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="logo">N<span>.</span>DTV</div>
+
+<button class="btn">GET APP</button>
+
 </div>
 
 <div class="menu">
-    <a href="Index.html">Home</a>
-    <a href="Latest.html">letest</a>
-    <a href="India.html">India</a>
-    <a href="Videos.html">Video</a>
-    <a href="World.html">World</a>
+<a href="index.html">Home</a>
+<a href="latest.html">Latest</a>
+<a href="india.html">India</a>
+<a href="videos.html">Videos</a>
+<a href="world.html">World</a>
 </div>
 
+<script>
+function openMenu(){
+var menu=document.getElementById("sideMenu");
+
+if(menu.style.left=="0px"){
+menu.style.left="-250px";
+}else{
+menu.style.left="0px";
+}
+}
+</script>
+
 </body>
-</html>
+    </html>
